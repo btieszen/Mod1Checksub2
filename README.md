@@ -1,54 +1,40 @@
-# React + TypeScript + Vite
+  Mod 1 Lesson check, Todo App with AuthO
+  This App has a AuthO login after login it redirects you to the Todo App
+  You can add task , also there is a button to view task detail, edit and delete
+  
+1.  First step sign in to AuthO and create account and new project
+2.  Create Application
+3.  Name your App
+4.  Create single page app
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+1. open Src Folder
+2. to run app cd todo
+3. npm run dev
+4. Make sure the local host matches what is in The TODO folder in the AuthOProvider.Tsx
 
-Currently, two official plugins are available:
+1. In the TODO app:
+2. AuthOProvider.tsx containes the log in infor mation you will need to copy over from the AuthO file you created
+3. The AuthenticationGuard.tsx  is used to protect the routes from unauthorized access
+4. CallbackPage.tsx calls the app after successful login
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+In Components folder:
+1. LoginButton.tsx this is the login button and redirects after login button is clicked
+2.LogoutButton.tsd this logs the user out of the app
+3. NavBar.tsx this sets up the navigation bar redirect
+4. NavBarButtons.tsx this displays the login and log out button
 
-## Expanding the ESLint configuration
+In Pages Folder:
+1.  Home-page.tsx this is the first page yuu see in the app that has logout to make sure the user is logged out then it give the login button
+2.  PageLayout.ts this structure how the app looks
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+IN Todo folder there is another folder list
+1.  Taskform.tsx this is the form to fill out to add task, description
+2.  usinputs.ts  this save the value of the inputs
+3.  TaskDiscrition.tsx  this get the info from input of the descrtiption of the task
+4.  TaskList.style.ts this is the styling for the todo page
+5.  TaskList.tsx this is the page set of for the todo app, it contains the task, the add task, new task,edit,view and delete
+6.  Home.style.ts provides styling for the home page
+7.  String.Json provides messages to ask the user if they want to delete or adds successful
+8.  ToDoProvider.tsx provides the const to add or delete task
+9.  Types.ts provides the typescritp information of the vlues is string,num, etc.
+10.  
